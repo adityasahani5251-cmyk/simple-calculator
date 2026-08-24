@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <div class="display-section">
+            <input type="text" id="display" class="display" placeholder="0" readonly>
+        </div>
+
+        <div class="buttons-grid">
+            <!-- First Row: Scientific Functions -->
+            <button class="btn function-btn" onclick="toggleAngle()">Deg</button>
+            <button class="btn function-btn" onclick="appendFunction('x!')">x!</button>
+            <button class="btn function-btn" onclick="appendValue('(')">(</button>
+            <button class="btn function-btn" onclick="appendValue(')')">)</button>
+            <button class="btn function-btn" onclick="appendValue('%')">%</button>
+            <button class="btn function-btn" onclick="clearDisplay()">AC</button>
+
+            <!-- Second Row -->
+            <button class="btn function-btn" onclick="appendFunction('1/')">1/x</button>
+            <button class="btn function-btn" onclick="appendFunction('sin')">sin</button>
+            <button class="btn function-btn" onclick="appendFunction('ln')">ln</button>
+            <button class="btn number-btn" onclick="appendValue('7')">7</button>
+            <button class="btn number-btn" onclick="appendValue('8')">8</button>
+            <button class="btn number-btn" onclick="appendValue('9')">9</button>
+            <button class="btn operator-btn" onclick="appendValue('/')">÷</button>
+
+            <!-- Third Row -->
+            <button class="btn function-btn" onclick="appendFunction('π')">π</button>
+            <button class="btn function-btn" onclick="appendFunction('cos')">cos</button>
+            <button class="btn function-btn" onclick="appendFunction('log')">log</button>
+            <button class="btn number-btn" onclick="appendValue('4')">4</button>
+            <button class="btn number-btn" onclick="appendValue('5')">5</button>
+            <button class="btn number-btn" onclick="appendValue('6')">6</button>
+            <button class="btn operator-btn" onclick="appendValue('*')">×</button>
+
+            <!-- Fourth Row -->
+            <button class="btn function-btn" onclick="appendFunction('e')">e</button>
+            <button class="btn function-btn" onclick="appendFunction('tan')">tan</button>
+            <button class="btn function-btn" onclick="appendFunction('sqrt')">√</button>
+            <button class="btn number-btn" onclick="appendValue('1')">1</button>
+            <button class="btn number-btn" onclick="appendValue('2')">2</button>
+            <button class="btn number-btn" onclick="appendValue('3')">3</button>
+            <button class="btn operator-btn" onclick="appendValue('-')">−</button>
+
+            <!-- Fifth Row -->
+            <button class="btn function-btn" onclick="showPreviousAnswer()">Ans</button>
+            <button class="btn function-btn" onclick="appendFunction('x^')">x^y</button>
+            <button class="btn function-btn" onclick="appendFunction('x^2')">x²</button>
+            <button class="btn number-btn" onclick="appendValue('0')">0</button>
+            <button class="btn number-btn" onclick="appendValue('.')">.</button>
+            <button class="btn equals-btn" onclick="calculate()">=</button>
+            <button class="btn operator-btn" onclick="appendValue('+')">+</button>
+        </div>
+
+        <!-- Backspace Button -->
+        <div class="backspace-section">
+            <button class="btn backspace-btn" onclick="backspace()">← Backspace</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
